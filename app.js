@@ -45,6 +45,7 @@ function selectOption(selectedButton, questionData) {
     // Disable all options once a choice is made
     allButtons.forEach(btn => btn.disabled = true);
 
+    // Fixed mapping: Changed questionData.answer to questionData.correct_answer
     if (selectedButton.innerText === questionData.correct_answer) {
         selectedButton.classList.add('correct');
         score++;
