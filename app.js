@@ -45,7 +45,7 @@ function selectOption(selectedButton, questionData) {
     // Disable all options once a choice is made
     allButtons.forEach(btn => btn.disabled = true);
 
-    if (selectedButton.innerText === questionData.answer) {
+    if (selectedButton.innerText === questionData.correct_answer) {
         selectedButton.classList.add('correct');
         score++;
         scoreText.innerText = score;
@@ -53,7 +53,7 @@ function selectOption(selectedButton, questionData) {
         selectedButton.classList.add('incorrect');
         // Highlight the correct answer for the user
         allButtons.forEach(btn => {
-            if (btn.innerText === questionData.answer) btn.classList.add('correct');
+            if (btn.innerText === questionData.correct_answer) btn.classList.add('correct');
         });
     }
 
